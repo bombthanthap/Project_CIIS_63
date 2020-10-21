@@ -1,0 +1,56 @@
+[edit] authorViews.py
+def auther_home(request):
+    return render(request,"author_templates/auther_home.html")
+
+def auther_add_paperid(request):
+    return render(request,"author_templates/auther_add_paperid.html")    
+
+def auther_payment_history(request):
+    return render(request,"author_templates/auther_payment_history.html")
+
+def auther_choose_paper(request):
+    return render(request,"author_templates/auther_choose_paper.html")
+
+def auther_upload_payment(request):
+    return render(request,"author_templates/auther_upload_payment.html")
+
+def auther_change_status(request):
+    return render(request,"author_templates/auther_change_status.html")
+
+def auther_edit_infomation(request):
+    return render(request,"author_templates/auther_edit_infomation.html")
+
+
+[edit] participantViews.py
+def participant_home(request):
+    return render(request,"participant_templates/participant_home.html")
+
+def participant_payment_history(request):
+    return render(request,"participant_templates/participant_payment_history.html")
+
+def participant_payment(request):
+    return render(request,"participant_templates/participant_payment.html")
+
+def participant_upload_payment(request):
+    return render(request,"participant_templates/participant_upload_payment.html")
+
+def participant_edit_infomation(request):
+    return render(request,"participant_templates/participant_edit_infomation.html")
+    
+    
+[edit] participantViews.py
+    #Author
+    path('author_home',authorViews.auther_home),
+    path('auther_add_paperid',authorViews.auther_add_paperid),
+    path('auther_payment_history',authorViews.auther_payment_history),
+    path('auther_choose_paper',authorViews.auther_choose_paper),
+    path('auther_upload_payment',authorViews.auther_upload_payment),
+    path('auther_change_status',authorViews.auther_change_status),
+    path('auther_edit_infomation',authorViews.auther_edit_infomation),
+
+    #Participant
+    path('participant_home',participantViews.participant_home),
+    path('participant_payment_history',participantViews.participant_payment_history),
+    path('participant_payment',participantViews.participant_payment),
+    path('participant_upload_payment',participantViews.participant_upload_payment),
+    path('participant_edit_infomation',participantViews.participant_edit_infomation),
