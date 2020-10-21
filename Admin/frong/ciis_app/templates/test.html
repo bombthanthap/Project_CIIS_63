@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CIIS System | Log in</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static "plugins/fontawesome-free/css/all.min.css" %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    	.palel-primary
+	{
+		border-color: #bce8f1;
+	}
+	.panel-primary>.panel-heading
+	{
+		background:#bce8f1;
+		
+	}
+	.panel-primary>.panel-body
+	{
+		background-color: #EDEDED;
+	}
+</style>
+  
+  
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Register
+                </div>
+                <div class="panel-body">
+                    <form name="myform">
+                        {% csrf_token %}
+
+                        {% for field in form %}
+                         <div class="form-group" >
+                            {{ field.errors }}
+                            {{ field.label_tag  }}
+                            {{ field }}
+                             </div>
+                         {% endfor %}
+                          
+              
+                          <div calss="form-group" align="right">
+
+                            <span class="error"></span>
+
+                          </div>
+                        
+                        
+                        <button id="submit" type="submit" value="submit" class="btn btn-primary center">Submit</button>
+                
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+ 
+
+    <script>
+$(document).ready(function(){
+  $('#identify').on('keyup',function(){
+    if($.trim($(this).val()) != '' && $(this).val().length == 13){
+      id = $(this).val().replace(/-/g,"");
+      var result = Script_checkID(id);
+      if(result === false){
+        $('span.error').removeClass('true').text('เลขบัตรผิด');
+      }else{
+        $('span.error').addClass('true').text('เลขบัตรถูกต้อง');
+      }
+    }else{
+      $('span.error').removeClass('true').text('');
+    }
+  })
+});
+
+function Script_checkID(id){
+    if(! IsNumeric(id)) return false;
+    if(id.substring(0,1)== 0) return false;
+    if(id.length != 13) return false;
+    for(i=0, sum=0; i < 12; i++)
+        sum += parseFloat(id.charAt(i))*(13-i);
+    if((11-sum%11)%10!=parseFloat(id.charAt(12))) return false;
+    return true;
+}
+function IsNumeric(input){
+    var RE = /^-?(0|INF|(0[1-7][0-7]*)|(0x[0-9a-fA-F]+)|((0|[1-9][0-9]*|(?=[\.,]))([\.,][0-9]+)?([eE]-?\d+)?))$/;
+    return (RE.test(input));
+}
+
+    </script>
+</html>
