@@ -1,0 +1,51 @@
+{% extends 'participant_templates/base_template.html' %}
+{% block page_title %}
+
+{% endblock page_title %}
+{% block main_content %}
+<style>
+  .button {
+    border: none;
+    color: white;
+    padding: 7px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button2 {background-color: #008CBA;} /* Blue */
+  </style>
+
+
+    <!-- Main content -->
+    <section class="content">
+<p style="font-size:25px"  >   Upload  Payment</p>
+
+      <div class="card-body">
+        <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
+          <thead>
+            <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending" aria-sort="descending">Bill ID</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Paper List</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Price</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Update</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">Status</th></tr>
+          </thead>
+          <tbody>
+ 
+            <tr role="row" class="odd">
+              <td class="sorting_1" tabindex="0">ID001</td>
+              <td>CIIS 2020</td>
+              <td>2000</td>
+              <td>2012/11/03</td>
+              <td><button class="button button2 nav-icon fas fa-cloud-upload-alt" >  Upload</button></td>
+              
+          </tbody>
+          
+        
+      </div>
+    
+      
+    </section>
+   
+    <!-- /.content -->
+{% endblock main_content %}
+
