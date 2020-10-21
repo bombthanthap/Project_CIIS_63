@@ -1,24 +1,24 @@
 [edit] authorViews.py
-def auther_home(request):
-    return render(request,"author_templates/auther_home.html")
+def author_home(request):
+    return render(request,"author_templates/author_home.html")
 
-def auther_add_paperid(request):
-    return render(request,"author_templates/auther_add_paperid.html")    
+def author_add_paperid(request):
+    return render(request,"author_templates/author_add_paperid.html")    
 
-def auther_payment_history(request):
-    return render(request,"author_templates/auther_payment_history.html")
+def author_payment_history(request):
+    return render(request,"author_templates/author_payment_history.html")
 
-def auther_choose_paper(request):
-    return render(request,"author_templates/auther_choose_paper.html")
+def author_choose_paper(request):
+    return render(request,"author_templates/author_choose_paper.html")
 
-def auther_upload_payment(request):
-    return render(request,"author_templates/auther_upload_payment.html")
+def author_upload_payment(request):
+    return render(request,"author_templates/author_upload_payment.html")
 
-def auther_change_status(request):
-    return render(request,"author_templates/auther_change_status.html")
+def author_change_status(request):
+    return render(request,"author_templates/author_change_status.html")
 
-def auther_edit_infomation(request):
-    return render(request,"author_templates/auther_edit_infomation.html")
+def author_edit_infomation(request):
+    return render(request,"author_templates/author_edit_infomation.html")
 
 
 [edit] participantViews.py
@@ -40,13 +40,13 @@ def participant_edit_infomation(request):
     
 [edit] urls.py
     #Author
-    path('author_home',authorViews.auther_home),
-    path('auther_add_paperid',authorViews.auther_add_paperid),
-    path('auther_payment_history',authorViews.auther_payment_history),
-    path('auther_choose_paper',authorViews.auther_choose_paper),
-    path('auther_upload_payment',authorViews.auther_upload_payment),
-    path('auther_change_status',authorViews.auther_change_status),
-    path('auther_edit_infomation',authorViews.auther_edit_infomation),
+    path('author_home',authorViews.author_home),
+    path('author_add_paperid',authorViews.author_add_paperid),
+    path('author_payment_history',authorViews.author_payment_history),
+    path('author_choose_paper',authorViews.author_choose_paper),
+    path('author_upload_payment',authorViews.author_upload_payment),
+    path('author_change_status',authorViews.author_change_status),
+    path('author_edit_infomation',authorViews.author_edit_infomation),
 
     #Participant
     path('participant_home',participantViews.participant_home),
