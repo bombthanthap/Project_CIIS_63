@@ -38,7 +38,7 @@ def participant_edit_infomation(request):
     return render(request,"participant_templates/participant_edit_infomation.html")
     
     
-[edit] participantViews.py
+[edit] urls.py
     #Author
     path('author_home',authorViews.auther_home),
     path('auther_add_paperid',authorViews.auther_add_paperid),
