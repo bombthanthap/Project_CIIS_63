@@ -1,2 +1,2 @@
 # Project_CIIS_63
-SE_project sh and file
+git นี้เอาไว้เพื่อรวมงานของกลุ่ม Python ชื่อ CIIS
