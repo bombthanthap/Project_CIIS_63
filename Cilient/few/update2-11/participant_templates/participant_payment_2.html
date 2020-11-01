@@ -1,0 +1,178 @@
+{% extends 'participant_templates/base_template.html' %}
+{% block page_title %}
+{% endblock page_title %}
+{% block main_content %}
+<!-- Main content -->
+<div class="card-body">
+    <p style="font-size:25px"> Payment Invoice</p>
+    <table class="table table-hover text-nowrap" id="tables">
+
+        <thead>
+            <tr>
+                <th>Firstname 1</th>
+                <th>Lastname 1</th>
+                <th>Email 1</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in dataall %}
+            <tr>
+                <td> {{member.firstname1}}</td>
+                <td> {{member.lastname1}}</td>
+                <td> {{member.email1}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <table class="table table-hover text-nowrap" id="tables">
+
+        <thead>
+            <tr>
+                <th>Firstname 2</th>
+                <th>Lastname 2</th>
+                <th>Email 2</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in dataall %}
+            <tr>
+                <td> {{member.firstname2}}</td>
+                <td> {{member.lastname2}}</td>
+                <td> {{member.email2}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table class="table table-hover text-nowrap" id="tables">
+
+        <thead>
+            <tr>
+                <th>Firstname 3</th>
+                <th>Lastname 3</th>
+                <th>Email 3</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in dataall %}
+            <tr>
+                <td> {{member.firstname3}}</td>
+                <td> {{member.lastname3}}</td>
+                <td> {{member.email3}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table class="table table-hover text-nowrap" id="tables">
+
+        <thead>
+            <tr>
+                <th>Firstname 4</th>
+                <th>Lastname 4</th>
+                <th>Email 4</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in dataall %}
+            <tr>
+                <td> {{member.firstname4}}</td>
+                <td> {{member.lastname4}}</td>
+                <td> {{member.email4}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+
+    <table class="table table-hover text-nowrap" id="tables">
+
+        <thead>
+            <tr>
+                <th>Firstname 5</th>
+                <th>Lastname 5</th>
+                <th>Email 5</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in dataall %}
+            <tr>
+                <td> {{member.firstname5}}</td>
+                <td> {{member.lastname5}}</td>
+                <td> {{member.email5}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <table class="table table-hover text-nowrap" id="tables">
+        </form>
+        <thead>
+            <tr>
+                <th>PaperList</th>
+                <th>Billid</th>
+                <th>Banquet</th>
+                <th>Person</th>
+                <th>Price</th>
+                <th>Date</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in dataall %}
+            <tr>
+                <td>{{ member.paperlist}}</td>
+                <td>{{ member.id}}</td>
+                <td>{{ member.banquet }}</td>
+                <td>{{ member.person}}</td>
+                <td>{{ member.price }}</td>
+                <td>{{ member.datebill }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+<div style="position:absolute;right:30px;">
+    <input class="btn btn-primary" type="submit" value="PayBill">
+</div>
+<div class="form-group">
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags == 'error' %}
+    <div class="alert alert-danger" style="margin-top:1px">{{ message }}</div>
+    {% endif %}
+    {% if message.tags == 'success' %}
+    <div class="alert alert-success" style="margin-top:10px">{{ message }}</div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</div>
+</div>
+<!-- /.content -->
+{% endblock main_content %}
